@@ -19,22 +19,29 @@ Fonts:
 */
 
 /* === Base Reset === */
+* /* === Base Reset === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* === Global Styles === */
 body {
-  font-family: 'Proxima Nova', Avenir;
+  font-family: 'Proxima Nova', Arial, sans-serif;
   background-color: #F9F9F9; /* Off-white background */
   color: #2E2E2E; /* Dark text */
+  line-height: 1.6;
 }
 
 /* === Hero Section === */
 .hero {
-  background-color: #77A8BB; /* Primary Blue background */
-  padding: 2rem;
+  background: linear-gradient(
+    135deg, /* Diagonal from bottom center to right center */
+    #77A8BB 0%,   /* Primary Blue */
+    #F9F9F9 100%  /* Off-white */
+  );
+  padding: 3rem 2rem;
   color: white;
 }
 
@@ -68,11 +75,10 @@ body {
 .hero p {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  line-height: 1.5;
-  color: #F3E9DC; /* Neutral beige text */
+  color: #F3E9DC; /* Soft beige for readable contrast */
 }
 
-/* === Form Styles === */
+/* === Donation Form === */
 .donation-form {
   display: flex;
   flex-wrap: wrap;
@@ -91,7 +97,7 @@ body {
 }
 
 .donation-form button {
-  background-color: #FFC907; /* Accent Yellow */
+  background-color: #FFC907; /* Bright yellow CTA */
   color: #2E2E2E;
   border: none;
   padding: 0.75rem 1.25rem;
@@ -107,11 +113,11 @@ body {
 
 .small-text {
   font-size: 0.9rem;
-  color: #F3E9DC; /* Light beige for softer contrast */
+  color: #F3E9DC;
   margin-bottom: 0.5rem;
 }
 
-/* === Image Section === */
+/* === Hero Image === */
 .hero-image img {
   width: 100%;
   max-width: 500px;
@@ -129,7 +135,7 @@ body {
   padding-top: 1rem;
 }
 
-/* === Responsive Styles === */
+/* === Responsive Design === */
 @media (max-width: 768px) {
   .hero-inner {
     flex-direction: column;
@@ -154,5 +160,5 @@ body {
     width: 100%;
   }
 
-  /* Code comment: These media queries adjust layout for smaller screens, making sure text and forms are readable and usable on mobile. */
+  /* Code comment: Media queries ensure layout stacks vertically on small screens */
 }
