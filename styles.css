@@ -18,63 +18,54 @@ Fonts:
 
 */
 
-/* === Base Reset === */
+/* === Reset & Base === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* === Global Styles === */
 body {
   font-family: 'Proxima Nova', Arial, sans-serif;
-  background-color: #F9F9F9; /* Off-white background */
-  color: #2E2E2E; /* Dark text */
+  background-color: #F9F9F9; /* Light neutral */
+  color: #2E2E2E; /* Primary text color */
   line-height: 1.6;
 }
 
-/* === Hero Section === */
+/* === Hero Section Layout === */
 .hero {
-  background: linear-gradient(
-    135deg, /* Diagonal from bottom center to right center */
-    #77A8BB 0%,   /* Primary Blue */
-    #F9F9F9 100%  /* Off-white */
-  );
-  padding: 3rem 2rem;
-  color: white;
-}
-
-.hero-inner {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 2rem;
+  width: 100%;
+  min-height: 80vh;
 }
 
-.hero-text {
+.hero-left {
+  background-color: #77A8BB; /* Brand Blue */
+  color: white;
   flex: 1;
   min-width: 300px;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #F3E9DC; /* Soft beige */
 }
 
 .logo {
   width: 140px;
-  margin-bottom: 1rem;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-  color: white;
-}
-
-.hero p {
-  font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  color: #F3E9DC; /* Soft beige for readable contrast */
 }
 
 /* === Donation Form === */
@@ -90,13 +81,14 @@ body {
   border: none;
   border-radius: 5px;
   flex: 1;
-  min-width: 200px;
+  min-width: 150px;
   background-color: white;
   color: #2E2E2E;
+  font-size: 1rem;
 }
 
 .donation-form button {
-  background-color: #FFC907; /* Bright yellow CTA */
+  background-color: #FFC907; /* Bold yellow */
   color: #2E2E2E;
   border: none;
   padding: 0.75rem 1.25rem;
@@ -113,40 +105,38 @@ body {
 .small-text {
   font-size: 0.9rem;
   color: #F3E9DC;
-  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-/* === Hero Image === */
-.hero-image img {
+/* === Hero Image Right Side === */
+.hero-right {
+  background-color: #F9F9F9;
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.hero-right img {
   width: 100%;
   max-width: 500px;
   border-radius: 10px;
-  border: 4px solid #FED8C1; /* Soft peach border */
-}
-
-/* === Footer Note === */
-.footer-note {
-  text-align: right;
-  margin-top: 2rem;
-  font-size: 1rem;
-  color: #F3E9DC;
-  border-top: 2px solid #FFC907;
-  padding-top: 1rem;
+  border: 4px solid #FED8C1; /* Peachy border */
 }
 
 /* === Responsive Design === */
 @media (max-width: 768px) {
-  .hero-inner {
+  .hero {
     flex-direction: column;
-    align-items: flex-start;
   }
 
-  .footer-note {
-    text-align: center;
-    font-size: 0.95rem;
+  .hero-left, .hero-right {
+    width: 100%;
   }
 
-  .hero h1 {
+  .hero-left h1 {
     font-size: 2rem;
   }
 
@@ -159,5 +149,9 @@ body {
     width: 100%;
   }
 
-  /* Code comment: Media queries ensure layout stacks vertically on small screens */
+  .hero-right {
+    padding: 1rem;
+  }
+
+  /* Code comment: Layout stacks vertically on smaller screens for better readability */
 }
