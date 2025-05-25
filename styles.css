@@ -27,7 +27,7 @@ Fonts:
 
 /* === Global Styles === */
 body {
-  font-family: 'Proxima Nova', Avenir;
+  font-family: 'Proxima Nova', Arial, sans-serif;
   background-color: #F9F9F9;
   color: #2E2E2E;
   line-height: 1.6;
@@ -42,7 +42,7 @@ body {
   );
   padding: 4rem 2rem;
   color: white;
-  min-height: 100vh; /* Fill screen height */
+  min-height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -65,7 +65,7 @@ body {
 }
 
 .logo {
-  width: 250px;
+  width: 220px; /* increased size */
   margin-bottom: 1.5rem;
 }
 
@@ -139,8 +139,8 @@ body {
   color: #77A8BB;
   margin-top: 2rem;
   padding-bottom: 1rem;
-  border-top: 2px solid #FFC907; /* Line at bottom */
-  padding-top: 0; /* Keep text above line */
+  border-top: 2px solid #FFC907;
+  padding-top: 0; /* keep text above line */
 }
 
 /* === Responsive Design === */
@@ -168,7 +168,7 @@ body {
   }
 
   .logo {
-    width: 200px;
+    width: 200px; /* slightly larger on mobile too */
   }
 
   .footer-note {
@@ -177,7 +177,7 @@ body {
   }
 }
 
-/* === iPad-specific scaling (Portrait & Landscape) === */
+/* === iPad-specific scaling === */
 @media (min-width: 768px) and (max-width: 1024px) {
   .hero {
     padding: 5rem 3rem;
@@ -203,7 +203,7 @@ body {
   }
 
   .logo {
-    width: 240px;
+    width: 260px; /* bigger logo for iPads */
   }
 
   .hero-image img {
