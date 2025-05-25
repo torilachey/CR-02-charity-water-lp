@@ -28,8 +28,8 @@ Fonts:
 /* === Global Styles === */
 body {
   font-family: 'Proxima Nova', Arial, sans-serif;
-  background-color: #F9F9F9; /* Off-white background */
-  color: #2E2E2E; /* Dark text */
+  background-color: #F9F9F9;
+  color: #2E2E2E;
   line-height: 1.6;
 }
 
@@ -40,8 +40,11 @@ body {
     #77A8BB 0%,
     #F9F9F9 100%
   );
-  padding: 3rem 2rem 2rem 2rem;
+  padding: 4rem 2rem;
   color: white;
+  min-height: 100vh; /* Fill screen height */
+  display: flex;
+  align-items: center;
 }
 
 .hero-inner {
@@ -52,9 +55,10 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   gap: 2rem;
-  position: relative;
+  width: 100%;
 }
 
+/* === Hero Text === */
 .hero-text {
   flex: 1;
   min-width: 300px;
@@ -62,49 +66,51 @@ body {
 
 .logo {
   width: 200px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: bold;
   color: white;
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   margin-bottom: 1.5rem;
-  color: #F3E9DC; /* Soft beige for readable contrast */
+  color: #F3E9DC;
 }
 
 /* === Donation Form === */
 .donation-form {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .donation-form input {
-  padding: 0.75rem;
+  padding: 1rem;
   border: none;
   border-radius: 5px;
   flex: 1;
   min-width: 200px;
   background-color: white;
   color: #2E2E2E;
+  font-size: 1.1rem;
 }
 
 .donation-form button {
-  background-color: #FFC907; /* Bright yellow CTA */
+  background-color: #FFC907;
   color: #2E2E2E;
   border: none;
-  padding: 0.75rem 1.25rem;
+  padding: 1rem 2rem;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
   transition: background 0.3s;
+  font-size: 1.1rem;
 }
 
 .donation-form button:hover {
@@ -112,7 +118,7 @@ body {
 }
 
 .small-text {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #F3E9DC;
   margin-bottom: 0.5rem;
 }
@@ -120,20 +126,21 @@ body {
 /* === Hero Image === */
 .hero-image img {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   border-radius: 10px;
-  border: 4px solid #FED8C1; /* Soft peach border */
+  border: 4px solid #FED8C1;
 }
 
-/* === Footer Note inside hero-inner === */
+/* === Footer Note === */
 .footer-note {
   width: 100%;
   text-align: center;
-  margin: 1rem 0;
-  font-size: 1rem;
-  color: #77A8BB; /* Blue color */
-  border-top: 2px solid #FFC907; /* Yellow line below text */
-  padding-top: 1rem;
+  font-size: 1.2rem;
+  color: #77A8BB;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  border-top: 2px solid #FFC907; /* Line at bottom */
+  padding-top: 0; /* Keep text above line */
 }
 
 /* === Responsive Design === */
@@ -143,13 +150,12 @@ body {
     align-items: flex-start;
   }
 
-  .footer-note {
-    text-align: center;
-    font-size: 0.95rem;
+  .hero h1 {
+    font-size: 2.2rem;
   }
 
-  .hero h1 {
-    font-size: 2rem;
+  .hero p {
+    font-size: 1.1rem;
   }
 
   .donation-form {
@@ -159,5 +165,52 @@ body {
 
   .donation-form button {
     width: 100%;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .footer-note {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/* === iPad-specific scaling (Portrait & Landscape) === */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    padding: 5rem 3rem;
+  }
+
+  .hero-inner {
+    max-width: 95%;
+    gap: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero p {
+    font-size: 1.4rem;
+  }
+
+  .donation-form input,
+  .donation-form button {
+    font-size: 1.3rem;
+    padding: 1.1rem 1.5rem;
+  }
+
+  .logo {
+    width: 240px;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+
+  .footer-note {
+    font-size: 1.4rem;
   }
 }
