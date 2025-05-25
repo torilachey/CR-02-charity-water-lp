@@ -27,7 +27,7 @@ Fonts:
 
 /* === Global Styles === */
 body {
-  font-family: 'Proxima Nova', Avenir;
+  font-family: 'Proxima Nova', Arial, sans-serif;
   background-color: #F9F9F9; /* Off-white background */
   color: #2E2E2E; /* Dark text */
   line-height: 1.6;
@@ -61,7 +61,7 @@ body {
 }
 
 .logo {
-  width: 140px;
+  width: 200px;
   margin-bottom: 1rem;
 }
 
