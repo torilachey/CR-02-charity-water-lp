@@ -27,7 +27,7 @@ Fonts:
 
 /* === Global Styles === */
 body {
-  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-family: 'Proxima Nova' Avenir;
   background-color: #F9F9F9; /* Off-white background */
   color: #2E2E2E; /* Dark text */
   line-height: 1.6;
@@ -35,48 +35,16 @@ body {
 
 /* === Hero Section === */
 .hero {
-  position: relative;
-  background-color: #77A8BB; /* Primary Blue */
+  background: linear-gradient(
+    135deg, /* Diagonal from bottom center to right center */
+    #77A8BB 0%,   /* Primary Blue */
+    #F9F9F9 100%  /* Off-white */
+  );
   padding: 3rem 2rem;
   color: white;
-
-  /* Complex polygon cut-out */
-  clip-path: polygon(
-    0 0,          /* top-left */
-    100% 0,       /* top-right */
-    100% 75%,     /* right edge - 75% down */
-    85% 100%,     /* bottom edge - 85% across */
-    0 100%        /* bottom-left */
-  );
-  overflow: visible; /* allow ::after to overflow */
 }
 
-/* White "cut-out" corner shape behind the hero */
-.hero::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 25%;
-  height: 25%;
-
-  background-color: #F9F9F9; /* Off-white */
-
-  /* Complex polygon shape matching the cut-out */
-  clip-path: polygon(
-    100% 0,       /* top-right */
-    0 100%,       /* bottom-left */
-    100% 100%     /* bottom-right */
-  );
-
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Ensure content stays above the cut-out */
 .hero-inner {
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -191,5 +159,5 @@ body {
     width: 100%;
   }
 
-  /* Media queries ensure layout stacks vertically on small screens */
+  /* Code comment: Media queries ensure layout stacks vertically on small screens */
 }
