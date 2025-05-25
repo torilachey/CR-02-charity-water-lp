@@ -65,7 +65,7 @@ body {
 }
 
 .logo {
-  width: 220px; /* increased size */
+  width: 350px; /* increased size */
   margin-bottom: 1.5rem;
 }
 
@@ -168,7 +168,7 @@ body {
   }
 
   .logo {
-    width: 200px; /* slightly larger on mobile too */
+    width: 280px; /* slightly larger on mobile too */
   }
 
   .footer-note {
