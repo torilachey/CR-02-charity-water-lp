@@ -61,7 +61,7 @@ body {
 }
 
 .logo {
-  width: 140px;
+  width: 200px;
   margin-bottom: 1rem;
 }
 
@@ -129,11 +129,12 @@ body {
 .footer-note {
   width: 100%;
   text-align: center;
-  margin: 1rem 0;
+  margin: 1rem 0 ;
   font-size: 1rem;
   color: #77A8BB; /* Blue color */
   border-top: 2px solid #FFC907; /* Yellow line below text */
-  padding-top: 1rem;
+  padding-top: 1rem; /* Remove padding on top */
+  padding-bottom: 1rem; /* Add padding below the text */
 }
 
 /* === Responsive Design === */
